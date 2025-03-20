@@ -3,9 +3,8 @@
 
 body {
   /* Base gradient background with animation */
-  background: linear-gradient(to right, #001f3f, #000000);
+  background: #001f3f;
   background-size: 600% 600%;
-  animation: gradientAnimation 15s ease infinite;
   height: 100%;
   margin: 0;
   color: white;
@@ -13,12 +12,6 @@ body {
   cursor: url('https://www.example.com/path/to/cursor-icon.png'), auto;
 }
 
-/* Gradient animation */
-@keyframes gradientAnimation {
-  0% { background-position: 0% 0%; }
-  50% { background-position: 100% 100%; }
-  100% { background-position: 0% 0%; }
-}
 
 .BTN {
   border-radius: 4px;

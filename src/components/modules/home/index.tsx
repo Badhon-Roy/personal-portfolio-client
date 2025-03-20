@@ -1,51 +1,64 @@
-"use client"
+"use client";
+
 import { Download } from "lucide-react";
 import Image from "next/image";
 import { Link } from "react-scroll";
 import { TypeAnimation } from "react-type-animation";
-
+import BannerImg from "../../../app/assets/images/banner.png";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: true });
+    }, []);
+
     return (
-        <div id="home" className="md:pt-32 pt-2">
+        <section
+            id="home"
+            className="relative flex items-center justify-center h-screen px-8 md:px-16 text-white"
+        >
+            <div className="z-10 flex flex-col-reverse items-center justify-between w-full gap-8 md:flex-row">
 
-            <div className="z-10 flex-row-reverse items-center justify-between gap-4 px-10 md:flex">
-
-
-                <div className="relative">
-                    <Image src={'https://anuragverma-portfolio.netlify.app/static/media/giphy.2e92bac81a336bfaf69e.gif'} alt="banner-image" width={500} height={500} />
-                    <div className="absolute inset-0 rounded-full border-4 border-gradient-to-r from-[#029bc0] to-[#00c4ff] transform scale-100 transition-transform duration-1000 hover:scale-110"></div>
-                </div>
-
-                <div className="flex-1 mt-8 text-center md:text-left">
-                    <h4 className="z-10 text-2xl text-white md:text-3xl">Hello , I&apos;m</h4>
-                    <h1 className="lg:text-[96px] md:text-7xl text-4xl font-bold text-white">Badhon Roy</h1>
-                    <p className="md:text-[16px] text-[9px] font-bold text-[#029bc0] my-2">
+                {/* LEFT CONTENT */}
+                <div className="flex-1 text-center md:text-left" data-aos="fade-right">
+                    <div className="flex items-center gap-2">
+                        <div className="w-3 h-3 bg-[#029bc0] rounded-full animate-pulse"></div>
+                        <h4 className="text-xl font-semibold md:text-2xl text-[#029bc0] font-mono">
+                            Welcome, to my world,
+                        </h4>
+                    </div>
+                    <h1 className="text-4xl font-bold md:text-7xl lg:text-[80px] my-4">
+                        Badhon Roy
+                    </h1>
+                    <p className="text-[#029bc0] font-bold md:text-2xl text-lg my-4">
                         <TypeAnimation
                             sequence={[
-                                'Junior Web Developer 🤖',
+                                "A Passionate Web Developer 🚀",
                                 1000,
-                                'Front-end Developer 👨‍💻',
+                                "Building Awesome UI/UX 🎨",
                                 1000,
-                                'React JS Developer 🤡',
-                                1000
+                                "React & MERN Stack Enthusiast 💻",
+                                1000,
                             ]}
                             wrapper="span"
                             speed={50}
-                            style={{ fontSize: '2em', display: 'inline-block' }}
                             repeat={Infinity}
-                        /></p>
-                    <div className="flex items-center justify-center gap-4 px-10 md:justify-start">
-                        <button className="hidden my-4 BTN md:block">
+                        />
+                    </p>
+                    <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+                        I specialize in **crafting dynamic user experiences** and **building modern web applications**. I love solving problems and creating visually appealing, functional designs.
+                    </p>
+
+                    {/* BUTTONS */}
+                    <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start mt-6">
+                        <button className="my-4 BTN">
                             <Link to="contact" className="p-2 cursor-pointer md:text-xl" spy={true} smooth={true} offset={-150} duration={500}>
                                 Hire me
                             </Link>
                         </button>
-                        <button className="block my-4 BTN btn md:hidden">
-                            <Link to="contact" className="p-2 cursor-pointer md:text-xl" spy={true} smooth={true} offset={-150} duration={500}>
-                                Hire me
-                            </Link>
-                        </button>
+
                         <a
                             className="flex items-center gap-2 BTN btn"
                             href="https://drive.google.com/uc?export=download&id=1V-QJGQSKLJhxuUuVShPB_DXw5Qz6ihQZ"
@@ -54,11 +67,20 @@ const Home = () => {
                             <Download className="text-xl" />
                         </a>
                     </div>
-
                 </div>
 
+                {/* RIGHT IMAGE */}
+                <div className="flex-1 flex justify-center items-center">
+                    <Image
+                        src={BannerImg}
+                        alt="Badhon Roy"
+                        width={600}
+                        height={600}
+                        data-aos="zoom-in"
+                    />
+                </div>
             </div>
-        </div>
+        </section>
     );
 };
 
