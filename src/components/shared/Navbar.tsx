@@ -6,7 +6,7 @@ import LogoImg from "../../app/assets/images/personal_logo.png";
 
 const Navbar = () => {
   return (
-    <div className="py-2 md:px-10 px-2 max-w-[1300px] mx-auto z-30 md:flex justify-between items-center sticky md:top-5 top-0 bg-opacity-10 bg-gray-100 backdrop-filter backdrop-blur-lg">
+    <div className="py-2 md:px-10 px-2 z-30 md:flex justify-between items-center sticky md:top-5 top-0 bg-opacity-10 bg-gray-100 backdrop-filter backdrop-blur-lg">
       <div>
         <ScrollLink to="home" spy={true} smooth={true} offset={-150} duration={500}>
           <Image className="w-[65px] hidden md:inline-block" src={LogoImg} alt="logo-image" width={65} height={65} />
