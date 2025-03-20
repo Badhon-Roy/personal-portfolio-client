@@ -6,7 +6,7 @@ import { Linkedin, X } from "lucide-react";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="container mx-auto">
       <p className="divider"></p>
       <footer className="items-start justify-between p-6 text-white md:p-10 md:flex gap-0p-10 footer">
         <div className="flex-1">
