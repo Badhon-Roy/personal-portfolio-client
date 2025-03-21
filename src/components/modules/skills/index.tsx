@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const skillsData = {
+const skillsData : any = {
     "Front-end": [
         { name: "HTML", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/800px-HTML5_Badge.svg.png" },
         { name: "CSS", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" },
@@ -46,7 +46,7 @@ export default function Skills() {
     const [activeTab, setActiveTab] = useState("Front-end");
 
     return (
-        <section id="skills" className="relative py-16 bg-gradient-to-br from-[#021024] to-[#0c1445] text-white my-16 rounded-lg">
+        <section id="skills" className="relative py-16 bg-gradient-to-br from-[#021024] to-[#0c1445] text-white my-16 rounded-lg md:mx-0 mx-4">
             {/* Gradient Effect */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(2,155,192,0.2),_transparent)] pointer-events-none"></div>
 
@@ -79,20 +79,20 @@ export default function Skills() {
                                 <span className="absolute text-2xl font-bold">{skill.percentage}%</span>
                             </div>
                             {/* Skill Name */}
-                            <h2 className="text-2xl font-bold">{skill.name}</h2>
+                            <h2 className="md:text-2xl text-xl font-bold">{skill.name}</h2>
                         </div>
                     ))}
                 </div>
 
                 {/* Skills Tabs & Content */}
-                <div className="flex justify-between gap-8 my-12">
+                <div className="md:flex justify-between gap-8 my-12">
                     {/* Tabs */}
-                    <div className="flex flex-col gap-4 space-x-4 w-1/5">
+                    <div className="grid grid-cols-2 md:grid-cols-1 gap-4 space-x-4 lg:w-1/5 md:2/5 mb-4">
                         {Object.keys(skillsData).map((category) => (
                             <button
                                 key={category}
                                 onClick={() => setActiveTab(category)}
-                                className={`px-6 py-3 w-full rounded-lg text-lg font-semibold relative transition-all duration-300 group 
+                                className={`px-6 py-3 w-full max-h-[50px] rounded-lg text-lg font-semibold relative transition-all duration-300 group 
                                     ${activeTab === category ? "bg-[#019fc7] text-white" : "bg-[#11263a] text-gray-300 hover:bg-[#019fc7] hover:text-white"}`}
                             >
                                 {category}
@@ -105,8 +105,8 @@ export default function Skills() {
                     </div>
 
                     {/* Skill Content */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 w-4/5">
-                        {skillsData[activeTab]?.map((skill, index) => (
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 md:gap-4 lg:gap-8 lg:w-4/5 md:w-3/5">
+                        {skillsData[activeTab]?.map((skill : any, index : number) => (
                             <div key={index} className="h-[140px] border border-[#019fc7] rounded-2xl p-4 bg-[#11263a] transition duration-300 text-center flex flex-col gap-2 justify-center items-center">
                                 <div>
                                     <Image className="object-cover" src={skill.img} alt={skill.name} width={60} height={60} />

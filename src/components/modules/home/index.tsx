@@ -19,13 +19,13 @@ const Home = () => {
             id="home"
             className="relative flex items-center justify-center h-screen px-8 md:px-16 text-white"
         >
-            <div className="z-10 flex flex-col-reverse items-center justify-between w-full gap-8 md:flex-row">
+            <div className="z-10 flex flex-col-reverse items-center justify-between w-full gap-8 lg:flex-row">
 
                 {/* LEFT CONTENT */}
                 <div className="flex-1 text-center md:text-left" data-aos="fade-right">
                     <div className="flex items-center gap-2">
                         <div className="w-3 h-3 bg-[#029bc0] rounded-full animate-pulse"></div>
-                        <h4 className="text-xl font-semibold md:text-2xl text-[#029bc0] font-mono">
+                        <h4 className="text-xl font-semibold md:text-2xl text-[#029bc0] font-mono md:text-start text-center">
                             Welcome, to my world,
                         </h4>
                     </div>
@@ -72,6 +72,7 @@ const Home = () => {
                 {/* RIGHT IMAGE */}
                 <div className="flex-1 flex justify-center items-center">
                     <Image
+                    className="lg:w-[600px] lg:h-[600px] md:w-[400px] h-[400px] w-full object-cover"
                         src={BannerImg}
                         alt="Badhon Roy"
                         width={600}

@@ -4,18 +4,18 @@ import Image from "next/image";
 
 const Project = ({ projects }: { projects: IProject[] }) => {
   return (
-    <div id="project" className="py-16">
+    <div id="project" className="py-16 mx-4">
       <div>
         <div>
           <h2 className="text-4xl font-bold text-center text-primary mb-12">My Projects</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects?.map((project) => (
             <div key={project._id} className="shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 border p-4">
               {/* Project Image */}
               <div className="relative">
                 <Image
-                  className="w-full h-48 object-cover rounded-t-lg"
+                  className="w-full md:h-48 h-38 object-cover rounded-t-lg"
                   src={project?.images[0]}
                   alt={project?.name}
                   width={500}
@@ -23,11 +23,11 @@ const Project = ({ projects }: { projects: IProject[] }) => {
                 />
               </div>
               {/* Project Info */}
-              <div className="p-6">
+              <div className="md:p-6 md:py-0 py-4">
                 <div className="flex justify-between items-center">
                   <h3 className="text-xl font-semibold mb-2 text-[#019fc7]">{project?.name}</h3>
                   {
-                    project?.projectType === 'team' && <p className="bg-[#019fc7] px-4 py-2 rounded-full font-bold text-sm ">Team Project</p>
+                    project?.projectType === 'team' && <p className="bg-[#019fc7] md:px-4 md:py-2 px-2 py-1 rounded-full font-bold md:text-sm text-[12px] ">Team Project</p>
                   }
                 </div>
                 <p className="mb-4">{project?.description}</p>
@@ -78,7 +78,7 @@ const Project = ({ projects }: { projects: IProject[] }) => {
                   </span>
                 </div>
 
-                <div className="flex flex-col gap-3">
+                <div className="md:flex flex-col gap-3 md:mb-0">
                   {/* Key Features */}
                   <div>
                     <p className="font-semibold">Key Features:</p>
@@ -89,7 +89,7 @@ const Project = ({ projects }: { projects: IProject[] }) => {
                     </ul>
                   </div>
                   {/* Links to GitHub */}
-                  <div className="flex justify-between items-center mt-6">
+                  <div className="md:flex justify-between items-center mt-6">
                     {/* Live Site */}
                     <a
                       href={project?.liveSite}
@@ -101,7 +101,7 @@ const Project = ({ projects }: { projects: IProject[] }) => {
                     </a>
 
                     {/* GitHub Links */}
-                    <div className="flex gap-4">
+                    <div className="flex gap-4 md:mt-0 mt-4 justify-between">
                       <a
                         href={project?.clientSiteGitHub}
                         target="_blank"

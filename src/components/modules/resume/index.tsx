@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Resume = () => {
     return (
-        <section id="resume" className="px-8 py-16">
+        <section id="resume" className="py-16 mx-8">
             <h2 className="relative pb-3 text-3xl font-bold text-center md:text-5xl text-primary">
                 Resume
             </h2>
@@ -11,7 +11,7 @@ const Resume = () => {
             A passionate web developer with experience in the MERN stack, eager to contribute to innovative projects and grow in the tech industry.y.
             </p>
 
-            <div className="flex justify-between gap-10">
+            <div className="md:flex justify-between gap-10">
                 <div className="flex-1">
                     <div className="flex items-center gap-4 mb-4">
                         <Image className="w-[50px]" src="https://cdn-icons-png.flaticon.com/512/10655/10655913.png" alt="Experience_image" width={50} height={50} />
@@ -58,7 +58,7 @@ const Resume = () => {
                         </li>
                     </ol>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 md:mt-0 mt-8">
                     <div>
                         <div className="flex items-center gap-4 mb-4">
                             <Image src="https://cdn-icons-png.flaticon.com/512/8576/8576501.png" alt="education_image" width={40} height={40} />

@@ -3,7 +3,7 @@ import ProfileImg from "../../../app/assets/images/profile.png";
 
 const About = () => {
     return (
-        <section id="about" className="relative py-16 bg-gradient-to-br from-[#0c1445] to-[#021024] text-white rounded-lg">
+        <section id="about" className="relative py-16 bg-gradient-to-br from-[#0c1445] to-[#021024] text-white rounded-lg md:mx-0 mx-4">
             {/* Background Effect */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(2,155,192,0.2),_transparent)]"></div>
 
@@ -15,11 +15,11 @@ const About = () => {
                 </h2>
 
                 {/* About Content */}
-                <div className="flex flex-col items-center justify-center mt-12 md:flex-row md:gap-12">
+                <div className="flex flex-col items-center justify-center mt-12 lg:flex-row md:gap-12">
 
                     {/* Profile Image */}
                     <div
-                        className="flex items-center justify-center relative p-2 transition-transform duration-500 rounded-full bg-gradient-to-br from-[#029bc0] to-[#44d286] hover:scale-105"
+                        className="flex items-center justify-center relative p-2 transition-transform duration-500 rounded-full bg-gradient-to-br from-[#029bc0] to-[#029bc0] hover:scale-105"
                         data-aos="fade-right"
                     >
                         <Image
@@ -33,9 +33,9 @@ const About = () => {
                     </div>
 
                     {/* Info Section */}
-                    <div className="flex-1 mt-10 md:mt-0 md:w-1/2" data-aos="fade-left">
+                    <div className="flex-1 mt-10 md:mt-0 lg:w-1/2" data-aos="fade-left">
                         <h3 className="text-3xl font-extrabold text-white">
-                            Hi, I&apos;m Badhon Roy 🚀
+                            Hi, I&apos;m Badhon Roy
                         </h3>
                         <p className="mt-3 text-lg font-semibold text-[#029bc0]">
                             Front-end Developer | React Enthusiast | UI Designer
@@ -46,7 +46,7 @@ const About = () => {
                             performance and responsiveness.
                         </p>
 
-                        <div className="grid grid-cols-2 text-start my-4">
+                        <div className="grid md:grid-cols-2 text-start my-4">
                             <p className="mb-3 text-lg">📧 <span className="font-semibold">Email:</span> roybadhon286@gmail.com</p>
                             <p className="mb-3 text-lg">📞 <span className="font-semibold">Phone:</span> 01825009171</p>
                             <p className="mb-3 text-lg">📍 <span className="font-semibold">From:</span> Dinajpur, Bangladesh</p>

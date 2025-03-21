@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Blog = ({ blogs }: { blogs: IBlog[] }) => {
     return (
-        <div id="blog" className="py-16">
+        <div id="blog" className="py-16 mx-4">
             <div>
                 <h2 className="text-4xl font-bold text-center text-primary mb-12">My Blogs</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -21,7 +21,7 @@ const Blog = ({ blogs }: { blogs: IBlog[] }) => {
 
                             {/* Blog Image */}
                             <Image
-                                className="w-full h-[250px] object-cover rounded-t-lg"
+                                className="w-full md:h-[250px] h-[180px] object-cover rounded-t-lg"
                                 src={blog?.thumbnail}
                                 alt={blog?.title}
                                 width={400}
@@ -46,7 +46,7 @@ const Blog = ({ blogs }: { blogs: IBlog[] }) => {
                                 <div className="flex justify-end items-end">
                                     <button className="my-4 BTN">
                                         <Link href={`/blog/${blog?._id}`} className="p-2 cursor-pointer md:text-xl">
-                                            Read Now
+                                            Read More
                                         </Link>
                                     </button>
                                 </div>
