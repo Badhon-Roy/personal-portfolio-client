@@ -57,9 +57,11 @@ const About = () => {
 
                     {/* Profile Image */}
                     <div
-                        className="flex items-center justify-center relative p-2 transition-transform duration-500 rounded-full bg-gradient-to-r from-[#60a5f9] to-[#34d29a]"
+                        className="flex items-center relative justify-center p-2 transition-transform duration-500 rounded-full bg-gradient-to-r from-[#60a5f9] to-[#34d29a]"
                         data-aos="fade-right"
                     >
+
+
 
 
                         <Image
@@ -69,6 +71,11 @@ const About = () => {
                             height={350}
                             className="rounded-full"
                         />
+                        <div className="inline-block animate-bounce absolute md:top-0 -top-8 md:-left-30 lg:left-0 xl:-left-20 2xl:-left-30">
+                            <div className="px-4 py-2 rounded-lg bg-purple-500/10 backdrop-blur-sm border border-purple-500/20 text-purple-400">
+                                🎯Goal-Oriented Developer
+                            </div>
+                        </div>
                         <div className="absolute inset-0 rounded-full bg-white opacity-5 blur-lg"></div>
                     </div>
 

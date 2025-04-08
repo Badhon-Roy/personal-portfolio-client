@@ -1,4 +1,5 @@
-import Image from "next/image";
+
+import { Award, Book, CalendarFold, School, Trophy, University } from "lucide-react";
 
 
 const Resume = () => {
@@ -8,10 +9,10 @@ const Resume = () => {
                 Resume
             </h2>
             <p className="text-center text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-            A passionate web developer with experience in the MERN stack, eager to contribute to innovative projects and grow in the tech industry.y.
+                A passionate web developer with experience in the MERN stack, eager to contribute to innovative projects and grow in the tech industry.y.
             </p>
 
-            <div className="md:flex justify-between gap-10">
+            {/* <div className="md:flex justify-between gap-10">
                 <div className="flex-1">
                     <div className="flex items-center gap-4 mb-4">
                         <Image className="w-[50px]" src="https://cdn-icons-png.flaticon.com/512/10655/10655913.png" alt="Experience_image" width={50} height={50} />
@@ -122,6 +123,86 @@ const Resume = () => {
                                 </ul>
                             </li>
                         </ol>
+                    </div>
+                </div>
+            </div> */}
+
+            <div className="grid grid-cols-2 gap-6">
+
+                <div className="p-6 rounded-lg border border-white/30 bg-[#0f1524] hover:border hover:border-[#60a5f9] transition-all duration-300 ease-in-out hover:text-[#60a5f9]">
+                    <div className="flex items-center gap-4">
+                        <div className="bg-[#171f2e] inline-block p-4 rounded-lg ">
+                            <Book className="text-[#44c675]" size={30} />
+                        </div>
+                        <h2 className="text-[24px] font-bold">Junior School Certificate (JSC)</h2>
+                    </div>
+                    <div className="space-y-4 mt-4">
+                        <h2 className="flex items-center gap-2"><School className="text-[#44c675]" /> Purba Sadipur High School</h2>
+                        <p className="flex items-center gap-2"><CalendarFold className="text-gray-600" /> 2018</p>
+                        <h2 className="flex items-center gap-2"><Trophy className="text-[#e7b008]" /> Key Achievements</h2>
+                        <ul className="list-disc pl-8 text-gray-300 text-sm space-y-1">
+                            <li>Top 5 in the class for overall performance.</li>
+                            <li>Participated and won in inter-school science quiz.</li>
+                            <li>Maintained perfect attendance throughout the year.</li>
+                        </ul>
+                        <div className="my-4 flex items-center gap-4">
+                            <div className="bg-[#0c222f] inline-block px-4 py-2 rounded-full">
+                                <h2 className="flex items-center gap-2 text-[#44c675]  "><Award />GPA: 4.64</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="p-6 rounded-lg border border-white/30 bg-[#0f1524] hover:border hover:border-[#60a5f9] transition-all duration-300 ease-in-out hover:text-[#60a5f9]">
+                    <div className="flex items-center gap-4">
+                        <div className="bg-[#171f2e] inline-block p-4 rounded-lg ">
+                            <Book className="text-[#44c675]" size={30} />
+                        </div>
+                        <h2 className="text-[24px] font-bold">Secondary School Certificate (SSC)</h2>
+                    </div>
+                    <div className="space-y-4 mt-4">
+                        <h2 className="flex items-center gap-2"><School className="text-[#44c675]" /> Purba Sadipur High School</h2>
+                        <p className="flex items-center gap-2"><CalendarFold className="text-gray-600" /> 2021</p>
+                        <h2 className="flex items-center gap-2"><Trophy className="text-[#e7b008]" /> Key Achievements</h2>
+                        <ul className="list-disc pl-8 text-gray-300 text-sm space-y-1">
+                            <li>Top 5 in the class for overall performance.</li>
+                            <li>Participated and won in inter-school science quiz.</li>
+                            <li>Maintained perfect attendance throughout the year.</li>
+                        </ul>
+                        <div className="my-4 flex items-center gap-4">
+                            <div className="bg-[#0c222f] inline-block px-4 py-2 rounded-full">
+                                <h2 className="flex items-center gap-2 text-[#44c675]  "><Award />GPA: 5.00</h2>
+                            </div>
+                            <div className="bg-[#0c222f] inline-block px-4 py-2 rounded-full">
+                                <h2 className="flex items-center gap-2 text-[#44c675]  "><Award /> Subject: Science</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="p-6 rounded-lg border border-white/30 bg-[#0f1524] hover:border hover:border-[#60a5f9] transition-all duration-300 ease-in-out hover:text-[#60a5f9]">
+                    <div className="flex items-center gap-4">
+                        <div className="bg-[#171f2e] inline-block p-4 rounded-lg ">
+                            <Book className="text-[#44c675]" size={30} />
+                        </div>
+                        <h2 className="text-[24px] font-bold">Diploma in Computer Science Technology (CST)</h2>
+                    </div>
+                    <div className="space-y-4 mt-4">
+                        <h2 className="flex items-center gap-2"><University className="text-[#44c675]" />Dinajpur Polytechnic Institute</h2>
+                        <p className="flex items-center gap-2"><CalendarFold className="text-gray-600" /> 2026</p>
+                        <h2 className="flex items-center gap-2"><Trophy className="text-[#e7b008]" /> Key Achievements</h2>
+                        <ul className="list-disc pl-8 text-gray-300 text-sm space-y-1">
+                            <li>Top 5 in the class for overall performance.</li>
+                            <li>Participated and won in inter-school science quiz.</li>
+                            <li>Maintained perfect attendance throughout the year.</li>
+                        </ul>
+                        <div className="my-4 flex items-center gap-4">
+                            <div className="bg-[#0c222f] inline-block px-4 py-2 rounded-full">
+                                <h2 className="flex items-center gap-2 text-[#44c675]  "><Award />Running ...(7th Semester)</h2>
+
+                            </div>
+                            <div className="bg-[#0c222f] inline-block px-4 py-2 rounded-full">
+                                <h2 className="flex items-center gap-2 text-[#44c675]  "><Award /> Department: Computer</h2>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

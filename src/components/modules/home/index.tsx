@@ -6,9 +6,8 @@ import { TypeAnimation } from "react-type-animation";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { AnimatedSpan, Terminal, TypingAnimation } from "@/components/magicui/terminal";
+import { AnimatedSpan, TypingAnimation } from "@/components/magicui/terminal";
 import { SparklesText } from "@/components/magicui/sparkles-text";
-
 const Home = () => {
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
@@ -19,7 +18,10 @@ const Home = () => {
             id="home"
             className="relative flex items-center justify-center min-h-screen px-4 text-white"
         >
+
             <div className="z-10 flex flex-col-reverse items-center justify-between w-full gap-8 lg:flex-row md:mt-0 mt-32">
+
+
 
                 {/* LEFT CONTENT */}
                 <div className="flex-1 text-center md:text-left relative" data-aos="fade-right">
@@ -29,19 +31,18 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="inline-block animate-bounce absolute top-40 right-10">
-                            <div className="px-4 py-2 rounded-lg bg-purple-500/10 backdrop-blur-sm border border-purple-500/20 text-purple-400">
-                                💡 Continuous Learning
-                            </div>
-                        </div>
-                    <div className="border inline-block px-4 py-2 bg-[#131c2f] rounded-full border-gray-600">
-                        <div className="flex items-center gap-2">
-                            <div className="w-3 h-3 bg-[#60a5f9] rounded-full animate-pulse"></div>
-                            <SparklesText className="font-semibold md:text-start text-center text-sm" text="Welcome, to my world" />
+                        <div className="px-4 py-2 rounded-lg bg-purple-500/10 backdrop-blur-sm border border-purple-500/20 text-purple-400">
+                            💡 Continuous Learning
                         </div>
                     </div>
+                    <div className="border inline-block px-4 py-2 bg-[#131c2f] rounded-full border-gray-600">
+                        <SparklesText className="font-semibold md:text-start text-center text-sm" text="🎉 Welcome, to my world" />
+                    </div>
                     <h1 className="text-4xl mt-8 font-bold md:text-7xl lg:text-[80px] my-4 bg-gradient-to-r from-[#60a5f9] to-[#34d29a] text-transparent bg-clip-text">
-                       <span className="text-white">I'm</span> Badhon Roy
+                        <span className="text-white">I'm</span> Badhon Roy
                     </h1>
+
+
 
 
                     <p className="text-[#60a5f9] font-medium md:text-xl my-4 border-[1px] border-[#60a5f9] inline-block px-4 py-2 rounded-full bg-[#041826]">
