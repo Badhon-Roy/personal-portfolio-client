@@ -49,7 +49,7 @@ const Home = () => {
                             sequence={[
                                 "A Passionate Web Developer",
                                 1000,
-                                "MERN Stack Enthusiast",
+                                "MERN Stack Developer",
                                 1000,
                                 "Next JS Developer",
                                 1000,
