@@ -4,7 +4,7 @@ import { Award, Book, CalendarFold, School, Trophy, University } from "lucide-re
 
 const Resume = () => {
     return (
-        <section id="resume" className="py-16 mx-8">
+        <section id="resume" className="mx-4">
             <h2 className="relative pb-3 text-3xl font-bold text-center md:text-5xl text-[#019fc7]">
                 Resume
             </h2>
@@ -127,14 +127,14 @@ const Resume = () => {
                 </div>
             </div> */}
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid lg:grid-cols-2 gap-6">
 
-                <div className="p-6 rounded-lg border border-white/30 bg-[#0f1524] hover:border hover:border-[#60a5f9] transition-all duration-300 ease-in-out hover:text-[#60a5f9]">
+                <div data-aos="zoom-out-up" className="md:p-6 p-3 rounded-lg border border-white/30 bg-[#0f1524] hover:border hover:border-[#60a5f9] transition-all duration-300 ease-in-out hover:text-[#60a5f9]">
                     <div className="flex items-center gap-4">
                         <div className="bg-[#171f2e] inline-block p-4 rounded-lg ">
                             <Book className="text-[#44c675]" size={30} />
                         </div>
-                        <h2 className="text-[24px] font-bold">Junior School Certificate (JSC)</h2>
+                        <h2 className="md:text-[24px] font-bold">Junior School Certificate (JSC)</h2>
                     </div>
                     <div className="space-y-4 mt-4">
                         <h2 className="flex items-center gap-2"><School className="text-[#44c675]" /> Purba Sadipur High School</h2>
@@ -147,17 +147,17 @@ const Resume = () => {
                         </ul>
                         <div className="my-4 flex items-center gap-4">
                             <div className="bg-[#0c222f] inline-block px-4 py-2 rounded-full">
-                                <h2 className="flex items-center gap-2 text-[#44c675]  "><Award />GPA: 4.64</h2>
+                                <h2 className="flex items-center gap-2 text-[#44c675]  md:text-[16px] text-sm"><Award />GPA: 4.64</h2>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="p-6 rounded-lg border border-white/30 bg-[#0f1524] hover:border hover:border-[#60a5f9] transition-all duration-300 ease-in-out hover:text-[#60a5f9]">
+                <div data-aos="zoom-out-up" className="md:p-6 p-3 rounded-lg border border-white/30 bg-[#0f1524] hover:border hover:border-[#60a5f9] transition-all duration-300 ease-in-out hover:text-[#60a5f9]">
                     <div className="flex items-center gap-4">
                         <div className="bg-[#171f2e] inline-block p-4 rounded-lg ">
                             <Book className="text-[#44c675]" size={30} />
                         </div>
-                        <h2 className="text-[24px] font-bold">Secondary School Certificate (SSC)</h2>
+                        <h2 className="md:text-[24px] font-bold">Secondary School Certificate (SSC)</h2>
                     </div>
                     <div className="space-y-4 mt-4">
                         <h2 className="flex items-center gap-2"><School className="text-[#44c675]" /> Purba Sadipur High School</h2>
@@ -168,22 +168,22 @@ const Resume = () => {
                             <li>Participated and won in inter-school science quiz.</li>
                             <li>Maintained perfect attendance throughout the year.</li>
                         </ul>
-                        <div className="my-4 flex items-center gap-4">
+                        <div className="my-4 md:flex items-center gap-4">
                             <div className="bg-[#0c222f] inline-block px-4 py-2 rounded-full">
-                                <h2 className="flex items-center gap-2 text-[#44c675]  "><Award />GPA: 5.00</h2>
+                                <h2 className="flex items-center gap-2 text-[#44c675] md:text-[16px] text-sm "><Award />GPA: 5.00</h2>
                             </div>
-                            <div className="bg-[#0c222f] inline-block px-4 py-2 rounded-full">
-                                <h2 className="flex items-center gap-2 text-[#44c675]  "><Award /> Subject: Science</h2>
+                            <div className="bg-[#0c222f] inline-block px-4 py-2 rounded-full md:mt-0 mt-4">
+                                <h2 className="flex items-center gap-2 text-[#44c675] md:text-[16px] text-sm "><Award /> Subject: Science</h2>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="p-6 rounded-lg border border-white/30 bg-[#0f1524] hover:border hover:border-[#60a5f9] transition-all duration-300 ease-in-out hover:text-[#60a5f9]">
+                <div data-aos="zoom-out-up" className="md:p-6 p-3 rounded-lg border border-white/30 bg-[#0f1524] hover:border hover:border-[#60a5f9] transition-all duration-300 ease-in-out hover:text-[#60a5f9]">
                     <div className="flex items-center gap-4">
                         <div className="bg-[#171f2e] inline-block p-4 rounded-lg ">
                             <Book className="text-[#44c675]" size={30} />
                         </div>
-                        <h2 className="text-[24px] font-bold">Diploma in Computer Science Technology (CST)</h2>
+                        <h2 className="md:text-[24px] font-bold">Diploma in CST</h2>
                     </div>
                     <div className="space-y-4 mt-4">
                         <h2 className="flex items-center gap-2"><University className="text-[#44c675]" />Dinajpur Polytechnic Institute</h2>
@@ -194,13 +194,13 @@ const Resume = () => {
                             <li>Participated and won in inter-school science quiz.</li>
                             <li>Maintained perfect attendance throughout the year.</li>
                         </ul>
-                        <div className="my-4 flex items-center gap-4">
+                        <div className="my-4 md:flex items-center gap-4">
                             <div className="bg-[#0c222f] inline-block px-4 py-2 rounded-full">
-                                <h2 className="flex items-center gap-2 text-[#44c675]  "><Award />Running ...(7th Semester)</h2>
+                                <h2 className="flex items-center gap-2 text-[#44c675] md:text-[16px] text-sm "><Award />Running ...(7th Semester)</h2>
 
                             </div>
-                            <div className="bg-[#0c222f] inline-block px-4 py-2 rounded-full">
-                                <h2 className="flex items-center gap-2 text-[#44c675]  "><Award /> Department: Computer</h2>
+                            <div className="bg-[#0c222f] inline-block px-4 py-2 rounded-full md:mt-0 mt-4">
+                                <h2 className="flex items-center gap-2 text-[#44c675] md:text-[16px] text-sm "><Award /> Department: Computer</h2>
                             </div>
                         </div>
                     </div>

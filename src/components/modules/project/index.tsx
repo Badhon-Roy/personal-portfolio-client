@@ -1,6 +1,7 @@
 import { IProject } from "@/types";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Project = ({ projects }: { projects: IProject[] }) => {
   return (
@@ -8,10 +9,13 @@ const Project = ({ projects }: { projects: IProject[] }) => {
       <div>
         <div>
           <h2 className="text-4xl font-bold text-center text-[#019fc7] mb-12">My Projects</h2>
+          <p className="text-center text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+          Explore a collection of my latest web development projects, showcasing creativity, clean UI, and powerful functionality built with modern technologies.
+            </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects?.map((project) => (
-            <div key={project._id} className="shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 border p-4">
+            <div data-aos="zoom-out-up" key={project._id} className="shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 border border-white/20 hover:border-[#60a5f9] p-4 bg-[#0f1524]">
               {/* Project Image */}
               <div className="relative">
                 <Image
@@ -30,7 +34,6 @@ const Project = ({ projects }: { projects: IProject[] }) => {
                     project?.projectType === 'team' && <p className="bg-[#019fc7] md:px-4 md:py-2 px-2 py-1 rounded-full font-bold md:text-sm text-[12px] ">Team Project</p>
                   }
                 </div>
-                <p className="mb-4">{project?.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {/* Displaying Technologies Used */}
                   <span className="font-semibold">Technologies:</span>
@@ -39,14 +42,7 @@ const Project = ({ projects }: { projects: IProject[] }) => {
                   {project?.technologiesUsed?.frontend.map((tech, index) => (
                     <span
                       key={index}
-                      className={`px-3 py-1 text-sm rounded-full ${tech === "React" ? "bg-cyan-500 text-white" :
-                        tech === "Redux" ? "bg-pink-600 text-white" :
-                          tech === "TypeScript" ? "bg-blue-400 text-white" :
-                            tech === "Tailwind CSS" ? "bg-teal-500 text-white" :
-                              tech === "Shadcn" ? "bg-gray-600 text-white" :
-                              tech === "Shadcn UI" ? "bg-gray-600 text-white" :
-                                "bg-gray-300 text-black" // Default case if tech is not specified
-                        }`}
+                      className="px-3 py-1 border hover:border-[#60a5f9] border-white/30 flex items-center gap-2 p-2 rounded-full bg-[#171f2e] hover:scale-105 transition-all duration-300 ease-in-out text-sm"
                     >
                       {tech}
                     </span>
@@ -56,14 +52,7 @@ const Project = ({ projects }: { projects: IProject[] }) => {
                   {project?.technologiesUsed?.backend.map((tech, index) => (
                     <span
                       key={index}
-                      className={`px-3 py-1 text-sm rounded-full ${tech === "Node.js" ? "bg-green-500 text-white" :
-                        tech === "Express.js" ? "bg-amber-400 text-white" :
-                          tech === "JWT" ? "bg-yellow-500 text-black" :
-                            tech === "Next.js" ? "bg-gray-900 text-white" :
-                              tech === "Stripe" ? "bg-blue-600 text-white" :
-                                tech === "Vercel" ? "bg-black text-white" :
-                                  "bg-gray-300 text-black" // Default case if tech is not specified
-                        }`}
+                       className="px-3 py-1 border hover:border-[#60a5f9] border-white/30 flex items-center gap-2 p-2 rounded-full bg-[#171f2e] hover:scale-105 transition-all duration-300 ease-in-out text-sm"
                     >
                       {tech}
                     </span>
@@ -71,19 +60,14 @@ const Project = ({ projects }: { projects: IProject[] }) => {
 
                   {/* Database */}
                   <span
-                    className={`px-3 py-1 text-sm rounded-full ${project?.technologiesUsed?.database === "MongoDB" ? "bg-green-600 text-white" :
-                      project?.technologiesUsed?.database === "Mongoose" ? "bg-teal-600 text-white" : "bg-gray-300 text-black"
-                      }`}
+                     className="px-3 py-1 border hover:border-[#60a5f9] border-white/30 flex items-center gap-2 p-2 rounded-full bg-[#171f2e] hover:scale-105 transition-all duration-300 ease-in-out text-sm"
                   >
                     {project?.technologiesUsed?.database}
                   </span>
 
                   {/* Authentication */}
                   <span
-                    className={`px-3 py-1 text-sm rounded-full ${project?.technologiesUsed?.authentication === "Firebase" ? "bg-orange-500 text-white" :
-                      project?.technologiesUsed?.authentication === "bcrypt" ? "bg-indigo-500 text-white" :
-                        "bg-gray-300 text-black"
-                      }`}
+                      className="px-3 py-1 border hover:border-[#60a5f9] border-white/30 flex items-center gap-2 p-2 rounded-full bg-[#171f2e] hover:scale-105 transition-all duration-300 ease-in-out text-sm"
                   >
                     {project?.technologiesUsed?.authentication}
                   </span>
@@ -117,9 +101,8 @@ const Project = ({ projects }: { projects: IProject[] }) => {
                         href={project?.clientSiteGitHub}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-primary font-semibold hover:underline hover:text-primary-dark transition duration-300 ease-in-out"
-                      >
-                        Client Code
+                        className="text-primary font-semibold hover:underline hover:text-primary-dark transition duration-300 ease-in-out "
+                      >Client Code
                       </a>
                       <a
                         href={project?.serverSiteGitHub}

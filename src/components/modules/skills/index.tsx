@@ -35,23 +35,23 @@ const tools = [
 export default function Skills() {
     // const [activeTab, setActiveTab] = useState("Front-end");
     return (
-        <section id="skills" className="relative py-16 text-white my-16 rounded-lg md:mx-0 mx-4">
+        <section id="skills" className="relative py-16 text-white mt-16 rounded-lg md:mx-0 mx-4">
 
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto">
                 {/* Section Heading */}
                 <h2 className="text-4xl font-bold text-center text-[#019fc7] mb-6">My Skills</h2>
-                <p className="text-center text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+                <p className="text-center md:text-lg text-sm text-gray-300 mb-12 max-w-3xl mx-auto">
                     I specialize in modern web development, creating dynamic and responsive applications. Below are my core skills and technologies I work with.
                 </p>
-                <div className="grid grid-cols-3 gap-6">
-                    <div className="p-6 rounded-lg border border-white/30 bg-[#0f1524] hover:shadow-lg shadow-[#60a5f9] transition-all duration-300 ease-in-out hover:border hover:border-[#60a5f9]">
+                <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+                    <div data-aos="zoom-out-up" className="md:p-6 p-3 rounded-lg border border-white/30 bg-[#0f1524] hover:shadow-lg shadow-[#60a5f9] transition-all duration-300 ease-in-out hover:border hover:border-[#60a5f9]">
                         <div className="flex items-center gap-4">
                             <div className="bg-[#171f2e] inline-block p-4 rounded-lg ">
                                 <CodeXml className="text-[#60a5f9]" size={30} />
                             </div>
-                            <h2 className="text-[24px] font-bold"> Frontend Development</h2>
+                            <h2 className="md:text-[24px] text-lg font-bold"> Frontend Development</h2>
                         </div>
-                        <div className="grid grid-cols-3 gap-4 mt-8">
+                        <div className="grid md:grid-cols-3 grid-cols-2 md:gap-4 gap-2 mt-8">
                             {
                                 frontendSkills?.map((skill: any) => (
                                     <div key={skill?.name} className="border hover:border-[#60a5f9] border-white/30 flex items-center gap-2 p-2 rounded-full bg-[#171f2e] hover:scale-105 transition-all duration-300 ease-in-out">
@@ -62,14 +62,14 @@ export default function Skills() {
                             }
                         </div>
                     </div>
-                    <div className="p-6 rounded-lg border border-white/30 bg-[#0f1524] hover:shadow-lg shadow-[#60a5f9] transition-all duration-300 ease-in-out hover:border hover:border-[#60a5f9]">
+                    <div data-aos="zoom-out-up" className="md:p-6 p-3 rounded-lg border border-white/30 bg-[#0f1524] hover:shadow-lg shadow-[#60a5f9] transition-all duration-300 ease-in-out hover:border hover:border-[#60a5f9]">
                         <div className="flex items-center gap-4">
                             <div className="bg-[#171f2e] inline-block p-4 rounded-lg ">
                                 <Database className="text-[#44c675]" size={30} />
                             </div>
-                            <h2 className="text-[24px] font-bold"> Backend Development</h2>
+                            <h2 className="md:text-[24px] text-lg font-bold"> Backend Development</h2>
                         </div>
-                        <div className="grid grid-cols-3 gap-4 mt-8">
+                        <div className="grid md:grid-cols-3 grid-cols-2 md:gap-4 gap-2 mt-8">
                             {
                                 backendSkills?.map((skill: any) => (
                                     <div key={skill?.name} className="border hover:border-[#60a5f9] border-white/30 flex items-center gap-2 p-2 rounded-full bg-[#171f2e] hover:scale-105 transition-all duration-300 ease-in-out">
@@ -80,14 +80,14 @@ export default function Skills() {
                             }
                         </div>
                     </div>
-                    <div className="p-6 rounded-lg border border-white/30 bg-[#0f1524] hover:shadow-lg shadow-[#60a5f9] transition-all duration-300 ease-in-out hover:border hover:border-[#60a5f9]">
+                    <div data-aos="zoom-out-up" className="md:p-6 p-3 rounded-lg border border-white/30 bg-[#0f1524] hover:shadow-lg shadow-[#60a5f9] transition-all duration-300 ease-in-out hover:border hover:border-[#60a5f9]">
                         <div className="flex items-center gap-4">
                             <div className="bg-[#171f2e] inline-block p-4 rounded-lg ">
                                 <Cpu className="text-[#e76dae]" size={30} />
                             </div>
-                            <h2 className="text-[24px] font-bold"> Tools & Technologies</h2>
+                            <h2 className="md:text-[24px] text-lg font-bold"> Tools & Technologies</h2>
                         </div>
-                        <div className="grid grid-cols-3 gap-4 mt-8">
+                        <div className="grid md:grid-cols-3 grid-cols-2 md:gap-4 gap-2 mt-8">
                             {
                                 tools?.map((skill: any) => (
                                     <div key={skill?.name} className="border hover:border-[#60a5f9] border-white/30 flex items-center gap-2 p-2 rounded-full bg-[#171f2e] hover:scale-105 transition-all duration-300 ease-in-out">
