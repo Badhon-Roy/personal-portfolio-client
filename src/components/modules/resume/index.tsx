@@ -4,7 +4,7 @@ import Image from "next/image";
 const Resume = () => {
     return (
         <section id="resume" className="py-16 mx-8">
-            <h2 className="relative pb-3 text-3xl font-bold text-center md:text-5xl text-primary">
+            <h2 className="relative pb-3 text-3xl font-bold text-center md:text-5xl text-[#019fc7]">
                 Resume
             </h2>
             <p className="text-center text-lg text-gray-300 mb-12 max-w-3xl mx-auto">

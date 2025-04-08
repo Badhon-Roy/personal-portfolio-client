@@ -7,7 +7,7 @@ const Blog = ({ blogs }: { blogs: IBlog[] }) => {
     return (
         <div id="blog" className="py-16 mx-4">
             <div>
-                <h2 className="text-4xl font-bold text-center text-primary mb-12">My Blogs</h2>
+                <h2 className="text-4xl font-bold text-center text-[#019fc7] mb-12">My Blogs</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {blogs?.map(blog => (
                         <div

@@ -45,9 +45,8 @@ const Contact = () => {
 
     return (
         <div id="contact" className="px-5 my-16">
-            <h2 className="md:text-4xl text-2xl font-bold relative text-center pb-2 text-color">
+            <h2 className="md:text-4xl text-2xl font-bold text-center pb-2 text-[#019fc7]">
                 Contact Me
-                <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 border-b-2 border-white md:w-48 w-28"></span>
             </h2>
             <div className="md:flex gap-8 lg:p-16 md:p-12 p-5 bg-[#052f57] border border-[#019fc7] rounded-2xl my-10">
                 <div className="flex-1">

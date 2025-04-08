@@ -92,7 +92,7 @@ export default function Skills() {
                             <button
                                 key={category}
                                 onClick={() => setActiveTab(category)}
-                                className={`px-6 py-3 w-full max-h-[50px] rounded-lg text-lg font-semibold relative transition-all duration-300 group 
+                                className={`md:px-6 px-3 py-3 w-full md:max-h-[50px] rounded-lg md:text-lg font-semibold relative transition-all duration-300 group 
                                     ${activeTab === category ? "bg-[#019fc7] text-white" : "bg-[#11263a] text-gray-300 hover:bg-[#019fc7] hover:text-white"}`}
                             >
                                 {category}
@@ -105,7 +105,7 @@ export default function Skills() {
                     </div>
 
                     {/* Skill Content */}
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 md:gap-4 lg:gap-8 lg:w-4/5 md:w-3/5">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 lg:gap-8 gap-4 lg:w-4/5 md:w-3/5">
                         {skillsData[activeTab]?.map((skill : any, index : number) => (
                             <div key={index} className="h-[140px] border border-[#019fc7] rounded-2xl p-4 bg-[#11263a] transition duration-300 text-center flex flex-col gap-2 justify-center items-center">
                                 <div>

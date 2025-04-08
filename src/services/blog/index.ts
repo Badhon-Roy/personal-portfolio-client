@@ -2,11 +2,11 @@
 
 export const getAllBlogs = async () => {
     try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/blogs`, {
-            next: {
-                tags: ["BLOG"]
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/blogs`,{
+            next : {
+              revalidate : 30
             }
-        })
+          })
 
         return res.json();
     } catch (error: any) {
@@ -15,11 +15,11 @@ export const getAllBlogs = async () => {
 }
 export const getSingeBlog = async (id : string) => {
     try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/blogs/${id}`, {
-            next: {
-                tags: ["BLOG"]
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/blogs/${id}`,{
+            next : {
+              revalidate : 30
             }
-        })
+          })
 
         return res.json();
     } catch (error: any) {

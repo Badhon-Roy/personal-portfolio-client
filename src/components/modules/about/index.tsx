@@ -33,7 +33,7 @@ const About = () => {
                     </div>
 
                     {/* Info Section */}
-                    <div className="flex-1 mt-10 md:mt-0 lg:w-1/2" data-aos="fade-left">
+                    <div className="flex-1 mt-10 md:mt-0 lg:w-1/2" data-aos="fade-right">
                         <h3 className="text-3xl font-extrabold text-white">
                             Hi, I&apos;m Badhon Roy
                         </h3>

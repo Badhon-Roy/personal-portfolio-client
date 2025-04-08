@@ -7,7 +7,7 @@ const Project = ({ projects }: { projects: IProject[] }) => {
     <div id="project" className="py-16 mx-4">
       <div>
         <div>
-          <h2 className="text-4xl font-bold text-center text-primary mb-12">My Projects</h2>
+          <h2 className="text-4xl font-bold text-center text-[#019fc7] mb-12">My Projects</h2>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects?.map((project) => (
@@ -24,8 +24,8 @@ const Project = ({ projects }: { projects: IProject[] }) => {
               </div>
               {/* Project Info */}
               <div className="md:p-6 md:py-0 py-4">
-                <div className="flex justify-between items-center">
-                  <h3 className="text-xl font-semibold mb-2 text-[#019fc7]">{project?.name}</h3>
+                <div className="flex justify-between items-center gap-8 my-4">
+                  <h3 className="text-xl font-semibold text-[#019fc7]">{project?.name}</h3>
                   {
                     project?.projectType === 'team' && <p className="bg-[#019fc7] md:px-4 md:py-2 px-2 py-1 rounded-full font-bold md:text-sm text-[12px] ">Team Project</p>
                   }
@@ -39,9 +39,13 @@ const Project = ({ projects }: { projects: IProject[] }) => {
                   {project?.technologiesUsed?.frontend.map((tech, index) => (
                     <span
                       key={index}
-                      className={`px-3 py-1 text-sm rounded-full ${tech === "React.js" ? "bg-blue-500 text-white" :
-                        tech === "Tailwind CSS" ? "bg-teal-500 text-white" :
-                          "bg-gray-300 text-black" // Default case if tech is not specified
+                      className={`px-3 py-1 text-sm rounded-full ${tech === "React" ? "bg-cyan-500 text-white" :
+                        tech === "Redux" ? "bg-pink-600 text-white" :
+                          tech === "TypeScript" ? "bg-blue-400 text-white" :
+                            tech === "Tailwind CSS" ? "bg-teal-500 text-white" :
+                              tech === "Shadcn" ? "bg-gray-600 text-white" :
+                              tech === "Shadcn UI" ? "bg-gray-600 text-white" :
+                                "bg-gray-300 text-black" // Default case if tech is not specified
                         }`}
                     >
                       {tech}
@@ -52,9 +56,13 @@ const Project = ({ projects }: { projects: IProject[] }) => {
                   {project?.technologiesUsed?.backend.map((tech, index) => (
                     <span
                       key={index}
-                      className={`px-3 py-1 text-sm rounded-full ${tech === "Express.js" ? "bg-green-500 text-white" :
-                        tech === "JWT" ? "bg-yellow-500 text-black" :
-                          "bg-gray-300 text-black" // Default case if tech is not specified
+                      className={`px-3 py-1 text-sm rounded-full ${tech === "Node.js" ? "bg-green-500 text-white" :
+                        tech === "Express.js" ? "bg-amber-400 text-white" :
+                          tech === "JWT" ? "bg-yellow-500 text-black" :
+                            tech === "Next.js" ? "bg-gray-900 text-white" :
+                              tech === "Stripe" ? "bg-blue-600 text-white" :
+                                tech === "Vercel" ? "bg-black text-white" :
+                                  "bg-gray-300 text-black" // Default case if tech is not specified
                         }`}
                     >
                       {tech}
@@ -63,7 +71,8 @@ const Project = ({ projects }: { projects: IProject[] }) => {
 
                   {/* Database */}
                   <span
-                    className={`px-3 py-1 text-sm rounded-full ${project?.technologiesUsed?.database === "MongoDB" ? "bg-green-600 text-white" : "bg-gray-300 text-black"
+                    className={`px-3 py-1 text-sm rounded-full ${project?.technologiesUsed?.database === "MongoDB" ? "bg-green-600 text-white" :
+                      project?.technologiesUsed?.database === "Mongoose" ? "bg-teal-600 text-white" : "bg-gray-300 text-black"
                       }`}
                   >
                     {project?.technologiesUsed?.database}
@@ -71,7 +80,9 @@ const Project = ({ projects }: { projects: IProject[] }) => {
 
                   {/* Authentication */}
                   <span
-                    className={`px-3 py-1 text-sm rounded-full ${project?.technologiesUsed?.authentication === "Firebase" ? "bg-orange-500 text-white" : "bg-gray-300 text-black"
+                    className={`px-3 py-1 text-sm rounded-full ${project?.technologiesUsed?.authentication === "Firebase" ? "bg-orange-500 text-white" :
+                      project?.technologiesUsed?.authentication === "bcrypt" ? "bg-indigo-500 text-white" :
+                        "bg-gray-300 text-black"
                       }`}
                   >
                     {project?.technologiesUsed?.authentication}

@@ -2,8 +2,7 @@
 @import "tw-animate-css";
 
 body {
-  /* Base gradient background with animation */
-  background: #001f3f;
+  background-color: #04081a;
   background-size: 600% 600%;
   height: 100%;
   margin: 0;
