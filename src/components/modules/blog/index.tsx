@@ -8,11 +8,12 @@ const Blog = ({ blogs }: { blogs: IBlog[] }) => {
         <div id="blog" className="py-16 mx-4">
             <div>
                 <h2 className="text-4xl font-bold text-center text-[#019fc7] mb-12">My Blogs</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                     {blogs?.map(blog => (
                         <div
+                        data-aos="zoom-out-up"
                             key={blog?._id}
-                            className="shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 border relative"
+                            className="shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 border border-white/20 hover:border-[#60a5f9] relative"
                         >
                             {/* Category Badge */}
                             <p className="absolute top-4 left-4 bg-[#019fc7] text-white rounded-full px-3 py-1 text-sm font-medium">
@@ -37,15 +38,15 @@ const Blog = ({ blogs }: { blogs: IBlog[] }) => {
                                     {blog?.tags?.map((tag, index) => (
                                         <span
                                             key={index}
-                                            className="text-sm bg-[#f0f4f8] text-gray-700 px-3 py-1 rounded-full font-medium"
+                                            className="px-3 py-1 border hover:border-[#60a5f9] border-white/30 flex items-center gap-2 p-2 rounded-full bg-[#171f2e] hover:scale-105 transition-all duration-300 ease-in-out text-sm"
                                         >
                                             {tag}
                                         </span>
                                     ))}
                                 </div>
                                 <div className="flex justify-end items-end">
-                                    <button className="my-4 BTN">
-                                        <Link href={`/blog/${blog?._id}`} className="p-2 cursor-pointer md:text-xl">
+                                    <button className="my-4">
+                                        <Link href={`/blog/${blog?._id}`} className="p-2 cursor-pointer md:text-xl underline hover:text-[#60a5f9]">
                                             Read More
                                         </Link>
                                     </button>
